@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hour Burger Kiosk</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="menu">
+
+            <h2 class="greetings-1">Hey,</h2>
+            <h2 class="greetings-2">Welcome to <span>Hour Burger</span>!</h2>
+
+            <h2 class="classification">New</h2>
+
+            <div class="item-menu">
+                <div class="item-card" onclick="order(1)">
+                    <img src="images/burger.png" alt="reload">
+                    <h3>Burger</h3>
+                    <p>₱50</p>
+                </div>
+                <div class="item-card" onclick="order(2)">
+                    <img src="images/fries.png" alt="reload">
+                    <h3>Fries</h3>
+                    <p>₱30</p>
+                </div>
+                <div class="item-card" onclick="order(3)">
+                    <img src="images/drink.png" alt="reload">
+                    <h3>Drink</h3>
+                    <p>₱20</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="receipt">
+            <h2>🧾 Your Order</h2>
+            <div class="orderListContainer">
+                <ul id="orderList">
+                    <p id="noOrderYetNotice">No order yet</p>
+                </ul>
+            </div>
+
+            <div id="total">Total: ₱0</div>
+
+            <div class="controls">
+                <button class="confirm" onclick="viewTotal()"><i class="bi bi-check-lg"></i> Confirm order</button>
+                <button class="clear" onclick="clearOrder()"><i class="bi bi-x-lg"></i> Clear order</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
